@@ -1,0 +1,21 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+nvim = "~/.config/nvim/"
+fish = "~/.config/fish/"
+btop = "~/.config/btop/"
+eza = "~/.config/eza/"
+starship = "~/.config/"
+brew = "~/"
+lazygit = "~/.config/lazygit/"
+macchina = "~/.config/macchina/"
+zellij = "~/.config/zellij/"
+yazi = "~/.config/yazi/"
+
+[default.variables]
+
+[settings]
+default_target_type = "automatic"
