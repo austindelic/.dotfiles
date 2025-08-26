@@ -1,0 +1,21 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+nvim = "~/.config/nvim/"
+btop = "~/.config/btop/"
+eza = "~/.config/eza/"
+brew = "~/.config/brew"
+lazygit = "~/.config/lazygit/"
+yazi = "~/.config/yazi/"
+"zsh/config" = "~/.config/zsh"
+"zsh/.zshenv" = "~/.zshenv"
+p10k = "~/.config/p10k"
+tmux = "~/.config/tmux"
+
+[default.variables]
+
+[settings]
+default_target_type = "automatic"
