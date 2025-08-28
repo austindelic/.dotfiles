@@ -4,16 +4,17 @@
 depends = []
 
 [default.files]
-nvim = "~/.config/nvim/"
-btop = "~/.config/btop/"
-eza = "~/.config/eza/"
+nvim = "~/.config/nvim"
+btop = "~/.config/btop"
+eza = "~/.config/eza"
 brew = "~/.config/brew"
-lazygit = "~/.config/lazygit/"
+lazygit = "~/.config/lazygit"
 yazi = "~/.config/yazi/"
 "zsh/config" = "~/.config/zsh"
 "zsh/.zshenv" = "~/.zshenv"
 p10k = "~/.config/p10k"
 tmux = "~/.config/tmux"
+ghostty = "~/.config/ghostty"
 
 [default.variables]
 

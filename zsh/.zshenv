@@ -21,3 +21,4 @@ path=(
   /usr/local/{,s}bin(N)
   $path
 )
+

@@ -23,6 +23,12 @@ alias ff='find . -type f -name'
 # misc
 alias zshrc='${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc'
 alias zdot='cd ${ZDOTDIR:-~}'
+alias bb="brew bundle -v --file='$HOME/.config/brew/.Brewfile'"
 
-alias bb='brew bundle -v'
+code() {
+  flatpak run com.vscodium.codium "$@" > /dev/null 2>&1
+}
+
+
+
 

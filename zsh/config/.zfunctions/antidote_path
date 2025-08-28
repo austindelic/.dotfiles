@@ -3,7 +3,7 @@ emulate -L zsh
 setopt localoptions
 
 local cache_file="${XDG_CACHE_HOME:-$HOME/.cache}/antidote/antidote_path"
-local p bp path
+local p bp antidotepath
 
 # Use cached path if valid
 [[ -f $cache_file ]] && p="$(<"$cache_file")" && [[ -f $p ]] && { print -r -- "$p"; return 0; }
@@ -11,10 +11,10 @@ local p bp path
 # Resolve via Homebrew
 command -v brew &>/dev/null || return 1
 bp="$(brew --prefix antidote 2>/dev/null)" || return 1
-path="$bp/share/antidote/antidote.zsh"
-[[ -f $path ]] || return 1
+antidotepath="$bp/share/antidote/antidote.zsh"
+[[ -f $antidotepath ]] || return 1
 
 # Cache and print
 mkdir -p -- "${cache_file:h}"
-print -r -- "$path" >| "$cache_file"
-print -r -- "$path"
+print -r -- "$antidotepath" >| "$cache_file"
+print -r -- "$antidotepath"
