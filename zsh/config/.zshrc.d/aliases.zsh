@@ -39,3 +39,7 @@ alias urlencode='python3 -c "import sys, urllib.parse as ul; \
 alias please=sudo
 
 alias bb='brew bundle --file=$HOME/.config/brew/.Brewfile'
+
+alias lg='lazygit'
+
+alias cddf='cd ~/.dotfiles'
