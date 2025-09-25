@@ -1,0 +1,21 @@
+# Brewfile
+
+# CLI tools
+brew "dotter"
+brew "git"
+brew "neovim"
+brew "gcc"
+brew "python"
+brew "rustup-init"
+brew "gh"
+brew "lazygit"
+brew "fd"
+brew "btop"
+brew "yazi"
+brew "eza"
+brew "bat"
+brew "ripgrep"
+brew "wget"
+brew "asdf"
+brew "zip"
+brew "docker"

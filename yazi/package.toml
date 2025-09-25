@@ -1,0 +1,7 @@
+[plugin]
+deps = []
+
+[[flavor.deps]]
+use = "sanjinso/monokai-vibrant"
+rev = "8b68223"
+hash = "f4458ebaf8961d714eba05fe5ba40166"
