@@ -17,3 +17,8 @@ brew "asdf"
 brew "zip"
 brew "docker"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-jetbrains-mono"
+brew "zoxide"
+brew "fzf"
+brew "just"
+

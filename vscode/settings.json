@@ -1,0 +1,40 @@
+{
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "workbench.sideBar.location": "right",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font Mono'",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "files.autoSave": "onFocusChange",
+    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.typeEvaluation.deprecateTypingAliases": true,
+    "python.analysis.typeEvaluation.enableTypeIgnoreComments": false,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "workbench.colorTheme": "Monokai Night",
+
+    "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+},
+"github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "python": false
+},
+"psi-header.config": {
+  "author": "Austin Delic",
+  "authorEmail": "austin@austindelic.com"
+}
+}

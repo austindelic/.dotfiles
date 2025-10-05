@@ -14,6 +14,9 @@ yazi = "~/.config/yazi/"
 "zsh/.zshenv" = "~/.zshenv"
 p10k = "~/.config/p10k"
 tmux = "~/.config/tmux"
+ghostty = "~/.config/ghostty"
+vscode = "~/Library/Application Support/Code/User"
+karabiner = "~/.config/karabiner"
 
 [default.variables]
 

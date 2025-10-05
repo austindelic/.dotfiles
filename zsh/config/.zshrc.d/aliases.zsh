@@ -43,3 +43,5 @@ alias bb='brew bundle --file=$HOME/.config/brew/.Brewfile'
 alias lg='lazygit'
 
 alias cddf='cd ~/.dotfiles'
+alias python='python3'
+alias cd='z'
