@@ -17,7 +17,8 @@ tmux = "~/.config/tmux"
 ghostty = "~/.config/ghostty"
 vscode = "~/Library/Application Support/Code/User"
 karabiner = "~/.config/karabiner"
-
+neovide = "~/.config/neovide"
+wallpapers = "~/.config/wallpapers"
 [default.variables]
 
 [settings]

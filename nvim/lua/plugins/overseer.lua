@@ -1,8 +1,8 @@
 return {
   {
     "stevearc/overseer.nvim",
+    lazy = true,
     opts = {
-      dap = false,
       task_list = {
         bindings = {
           ["<C-h>"] = false,
@@ -26,6 +26,6 @@ return {
           winblend = 0,
         },
       },
-    }
+    },
   },
 }

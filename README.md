@@ -1,12 +1,15 @@
 # For Debian/Ubuntu
 
 ## Install brew requirements
+
 ```bash
 sudo apt-get install build-essential procps curl file git
 ```
+
 # Homebrew
 
 ## Install Homebrew
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -34,6 +37,7 @@ dotter deploy -v
 ```
 
 ## Run Brew Bundle (start new terminal session if not in fish)
+
 ```bash
 bb
 ```

@@ -1,3 +1,4 @@
+
 {
     "profiles": [
         {
@@ -314,7 +315,7 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock = Backspace when tapped, Control when held",
+                        "description": "Post escape if caps is pressed alone, left_ctrl otherwise",
                         "manipulators": [
                             {
                                 "from": {
@@ -322,7 +323,7 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "delete_or_backspace" }],
+                                "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
@@ -335,3 +336,4 @@
         }
     ]
 }
+
