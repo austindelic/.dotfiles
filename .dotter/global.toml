@@ -12,6 +12,7 @@ lazygit = "~/.config/lazygit/"
 yazi = "~/.config/yazi/"
 "zsh/config" = "~/.config/zsh"
 "zsh/.zshenv" = "~/.zshenv"
+"zsh/.hushlogin" = "~/.hushlogin"
 p10k = "~/.config/p10k"
 tmux = "~/.config/tmux"
 ghostty = "~/.config/ghostty"
@@ -19,6 +20,8 @@ vscode = "~/Library/Application Support/Code/User"
 karabiner = "~/.config/karabiner"
 neovide = "~/.config/neovide"
 wallpapers = "~/.config/wallpapers"
+direnv = "~/.config/direnv"
+
 [default.variables]
 
 [settings]

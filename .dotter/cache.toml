@@ -1,6 +1,7 @@
 [symlinks]
 "brew/.Brewfile" = "/Users/AustinDe/.config/brew/.Brewfile"
 "btop/btop.conf" = "/Users/AustinDe/.config/btop/btop.conf"
+"direnv/direnv.toml" = "/Users/AustinDe/.config/direnv/direnv.toml"
 "eza/theme.yaml" = "/Users/AustinDe/.config/eza/theme.yaml"
 "ghostty/config" = "/Users/AustinDe/.config/ghostty/config"
 "karabiner/karabiner.json" = "/Users/AustinDe/.config/karabiner/karabiner.json"
@@ -48,6 +49,7 @@
 "yazi/flavors/monokai-vibrant.yazi/tmtheme.xml" = "/Users/AustinDe/.config/yazi/flavors/monokai-vibrant.yazi/tmtheme.xml"
 "yazi/package.toml" = "/Users/AustinDe/.config/yazi/package.toml"
 "yazi/theme.toml" = "/Users/AustinDe/.config/yazi/theme.toml"
+"zsh/.hushlogin" = "/Users/AustinDe/.hushlogin"
 "zsh/.zshenv" = "/Users/AustinDe/.zshenv"
 "zsh/config/.antidote/.bumpversion.cfg" = "/Users/AustinDe/.config/zsh/.antidote/.bumpversion.cfg"
 "zsh/config/.antidote/.editorconfig" = "/Users/AustinDe/.config/zsh/.antidote/.editorconfig"
