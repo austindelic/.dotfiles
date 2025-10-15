@@ -21,6 +21,7 @@
 "nvim/lua/plugins/colorscheme.lua" = "/Users/AustinDe/.config/nvim/lua/plugins/colorscheme.lua"
 "nvim/lua/plugins/example.lua" = "/Users/AustinDe/.config/nvim/lua/plugins/example.lua"
 "nvim/lua/plugins/overseer.lua" = "/Users/AustinDe/.config/nvim/lua/plugins/overseer.lua"
+"nvim/lua/plugins/telescope_native.lua" = "/Users/AustinDe/.config/nvim/lua/plugins/telescope_native.lua"
 "nvim/stylua.toml" = "/Users/AustinDe/.config/nvim/stylua.toml"
 "p10k/config.zsh" = "/Users/AustinDe/.config/p10k/config.zsh"
 "spicetify/Themes/Blackout/README.md" = "/Users/AustinDe/.config/spicetify/Themes/Blackout/README.md"
