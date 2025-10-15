@@ -50,3 +50,4 @@ alias vim="nvim"
 alias nvid='neovide --fork'
 alias ghostty="/Applications/Ghostty.app/Contents/MacOS/ghostty"
 alias grep="rg"
+alias cloc="scc"

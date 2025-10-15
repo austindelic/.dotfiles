@@ -21,4 +21,4 @@ cask "font-jetbrains-mono"
 brew "zoxide"
 brew "fzf"
 brew "just"
-
+brwe "scc"

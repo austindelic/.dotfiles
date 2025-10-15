@@ -21,7 +21,7 @@ karabiner = "~/.config/karabiner"
 neovide = "~/.config/neovide"
 wallpapers = "~/.config/wallpapers"
 direnv = "~/.config/direnv"
-
+spicetify = "~/.config/spicetify"
 [default.variables]
 
 [settings]
