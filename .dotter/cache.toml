@@ -241,7 +241,6 @@
 "yazi/package.toml" = "/Users/austindelic/.config/yazi/package.toml"
 "yazi/theme.toml" = "/Users/austindelic/.config/yazi/theme.toml"
 "zsh/.hushlogin" = "/Users/austindelic/.hushlogin"
-"zsh/.zprofile" = "/Users/austindelic/.zprofile"
 "zsh/.zshenv" = "/Users/austindelic/.zshenv"
 "zsh/config/.antidote/.bumpversion.cfg" = "/Users/austindelic/.config/zsh/.antidote/.bumpversion.cfg"
 "zsh/config/.antidote/.editorconfig" = "/Users/austindelic/.config/zsh/.antidote/.editorconfig"

@@ -3,51 +3,42 @@
 # .aliases - Set whatever shell aliases you want.
 #
 
-# single character aliases - be sparing!
-alias _=sudo
 alias ls='eza --icons --group-directories-first'
-alias l=ls
 alias g=git
 alias lt='ls -T'
-# mask built-ins with better defaults
 alias vi=vim
-
-# more ways to ls
-alias ll='ls -lh'
-alias la='ls -lAh'
-alias ldot='ls -ld .*'
-
-# fix common typos
-alias quit='exit'
-alias cd..='cd ..'
-
-# tar
-alias tarls="tar -tvf"
-alias untar="tar -xf"
-
-# find
-alias fd='find . -type d -name'
-alias ff='find . -type f -name'
-
-# url encode/decode
-alias urldecode='python3 -c "import sys, urllib.parse as ul; \
-    print(ul.unquote_plus(sys.argv[1]))"'
-alias urlencode='python3 -c "import sys, urllib.parse as ul; \
-    print (ul.quote_plus(sys.argv[1]))"'
-
-# misc
-alias please=sudo
-
 alias bb='brew bundle --file=$HOME/.config/brew/.Brewfile'
-
 alias lg='lazygit'
-
 alias cddf='cd ~/.dotfiles'
 alias python='python3'
 alias cd='z'
-
 alias vim="nvim"
 alias nvid='neovide --fork'
 alias ghostty="/Applications/Ghostty.app/Contents/MacOS/ghostty"
 alias grep="rg"
 alias cloc="scc"
+alias td="taskwarrior-tui"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias c='clear'
+alias h='history'
+alias cat='bat'
+function yazi-wrapper() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+alias y='yazi-wrapper'
+alias curl='xh'
+alias zj='zellij'
+alias sz='source ~/.config/zsh/.zshrc'
+cproj() {
+  local dir
+  dir=$(fd . ~/Projects -t d -d 1 -x basename {} \
+    | fzf --height=40% --reverse --border --prompt='project> ') || return
+
+  cd "$HOME/Projects/$dir"
+}
+alias p='cproj'
