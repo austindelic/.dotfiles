@@ -24,7 +24,8 @@
 
     "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "diffEditor.ignoreTrimWhitespace": false
 },
 "github.copilot.enable": {
     "*": false,
@@ -36,5 +37,15 @@
 "psi-header.config": {
   "author": "Austin Delic",
   "authorEmail": "austin@austindelic.com"
+},
+"chat.tools.terminal.autoApprove": {
+    "cd /Users/AustinDe/projects/adventure-world && python3 -c \"\nfrom src.cli import cli\nfrom click.testing import CliRunner\nrunner = CliRunner()\nresult = runner.invoke(cli, ['-f', 'examples/scenario1.json'])\nprint(result.output[:500])\nif result.exception:\n    import traceback\n    traceback.print_exception(type(result.exception), result.exception, result.exception.__traceback__)\n\" 2>&1": {
+        "approve": true,
+        "matchCommandLine": true
+    },
+    "python3 test_patron_behavior.py": {
+        "approve": true,
+        "matchCommandLine": true
+    }
 }
 }

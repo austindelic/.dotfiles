@@ -13,20 +13,18 @@ belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_se
 
 # Keybindings
 belak/zsh-utils path:editor
-
 # History
 belak/zsh-utils path:history
-
 # Prompt
 romkatv/powerlevel10k
-
+jeffreytse/zsh-vi-mode
 # Utilities
 zshzoo/macos conditional:is-macos
 belak/zsh-utils path:utility
-romkatv/zsh-bench kind:path
 ohmyzsh/ohmyzsh path:plugins/extract
 
 # Other Fish-like features
 zdharma-continuum/fast-syntax-highlighting  # Syntax highlighting
 zsh-users/zsh-autosuggestions               # Auto-suggestions
 zsh-users/zsh-history-substring-search      # Up/Down to search history
+

@@ -1,2 +1,4 @@
 theme = Monokai Soda
-font-family = JetBrains Mono NL
+font-family = Monocraft Nerd Font
+
+keybind = shift+enter=text:\x1b\r
