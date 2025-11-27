@@ -435,6 +435,7 @@
 "zsh/config/.zsh_sessions/DD62BC9C-FA58-4B0D-ABE0-27D3DADCEB43.session" = "/Users/AustinDe/.config/zsh/.zsh_sessions/DD62BC9C-FA58-4B0D-ABE0-27D3DADCEB43.session"
 "zsh/config/.zsh_sessions/_expiration_check_timestamp" = "/Users/AustinDe/.config/zsh/.zsh_sessions/_expiration_check_timestamp"
 "zsh/config/.zshrc" = "/Users/AustinDe/.config/zsh/.zshrc"
+"zsh/config/.zshrc.d/.fzf-git.zsh" = "/Users/AustinDe/.config/zsh/.zshrc.d/.fzf-git.zsh"
 "zsh/config/.zshrc.d/activate.zsh" = "/Users/AustinDe/.config/zsh/.zshrc.d/activate.zsh"
 "zsh/config/.zshrc.d/aliases.zsh" = "/Users/AustinDe/.config/zsh/.zshrc.d/aliases.zsh"
 "zsh/config/.zshrc.d/history-substring-search.zsh" = "/Users/AustinDe/.config/zsh/.zshrc.d/history-substring-search.zsh"

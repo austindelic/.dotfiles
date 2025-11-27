@@ -1,4 +1,4 @@
 [tools]
-bun = '1.3.2'
-python = '3.14.0'
-node = '25.1.0'
+bun = 'latest'
+python = 'latest'
+node = 'latest'
