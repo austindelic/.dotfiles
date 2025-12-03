@@ -65,6 +65,23 @@ EOF
     *)       ;;  # quit/do nothing
   esac
 }
+
+
+function toggle_fps() {
+  # Read current value (empty string if not set)
+  local current
+  current=$(/bin/launchctl getenv MTL_HUD_ENABLED 2>/dev/null)
+
+  if [[ "$current" == "1" ]]; then
+    echo "Disabling macOS Metal FPS HUD…"
+    /bin/launchctl unsetenv MTL_HUD_ENABLED
+    echo "Disabled. (Restart apps to apply)"
+  else
+    echo "Enabling macOS Metal FPS HUD…"
+    /bin/launchctl setenv MTL_HUD_ENABLED 1
+    echo "Enabled. (Restart apps to apply)"
+  fi
+}
 # menus
 alias tools='tools_menu'
 alias help='tools'

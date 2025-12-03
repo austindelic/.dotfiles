@@ -1,11 +1,27 @@
 {
   "global": {
+    "enable_notification_window": false,
     "show_in_menu_bar": false
   },
   "profiles": [
     {
       "complex_modifications": {
         "rules": [
+          {
+            "description": "Caps Lock: Esc when alone, Ctrl when held",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
+                "to": [{ "key_code": "left_control" }],
+                "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
+              }
+            ]
+          },
           {
             "description": "Mac OSX: double-tap right shift key → caps lock toggle",
             "manipulators": [
@@ -19,27 +35,15 @@
                 ],
                 "from": {
                   "key_code": "right_shift",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
-                "to": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
+                "to": [{ "key_code": "caps_lock" }],
                 "type": "basic"
               },
               {
                 "from": {
                   "key_code": "right_shift",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to": [
                   {
@@ -48,9 +52,7 @@
                       "value": 1
                     }
                   },
-                  {
-                    "key_code": "right_shift"
-                  }
+                  { "key_code": "right_shift" }
                 ],
                 "to_delayed_action": {
                   "to_if_canceled": [
@@ -73,41 +75,24 @@
                 "type": "basic"
               }
             ]
-          },
-          {
-            "description": "Caps Lock: Esc when alone, Ctrl when held",
-            "manipulators": [
-              {
-                "type": "basic",
-                "from": {
-                  "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "left_control"
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "escape"
-                  }
-                ],
-                "parameters": {
-                  "basic.to_if_alone_timeout_milliseconds": 200
-                }
-              }
-            ]
           }
         ]
       },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 6920,
+            "vendor_id": 2821
+          },
+          "ignore": false
+        }
+      ],
       "name": "Default profile",
       "selected": true,
       "virtual_hid_keyboard": {
+        "indicate_sticky_modifier_keys_state": false,
         "keyboard_type_v2": "ansi"
       }
     }
