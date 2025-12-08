@@ -23,6 +23,7 @@ wallpapers = "~/.config/wallpapers"
 direnv = "~/.config/direnv"
 spicetify = "~/.config/spicetify"
 mise = "~/.config/mise"
+posting = "~/.config/posting"
 [default.variables]
 
 [settings]

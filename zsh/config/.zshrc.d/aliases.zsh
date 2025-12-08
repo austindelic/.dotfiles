@@ -102,6 +102,7 @@ alias grep='rg'
 alias top='btop'
 alias cat='bat'
 alias ls='eza --icons --group-directories-first'
+alias diff='delta'
 #tools
 alias pingg='gping'
 alias bench='hyperfine'
