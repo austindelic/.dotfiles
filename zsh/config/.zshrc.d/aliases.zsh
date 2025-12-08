@@ -82,6 +82,10 @@ function toggle_fps() {
     echo "Enabled. (Restart apps to apply)"
   fi
 }
+
+function sourcecddf() {
+  source ~/.config/zsh/.zshrc
+}
 # menus
 alias tools='tools_menu'
 alias help='tools'
@@ -132,7 +136,6 @@ alias ltt='eza --tree --level=4 --icons'
 alias la='eza -a --icons'
 
 # misc
-alias sz='source ~/.config/zsh/.zshrc'
 
 
 

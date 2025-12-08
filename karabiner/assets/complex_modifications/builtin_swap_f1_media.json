@@ -1,0 +1,285 @@
+{
+  "title": "Built-in: F-keys = media, Fn+F-keys = F1–F12 (global F-keys ON)",
+  "rules": [
+    {
+      "description": "For all keyboards except Keychron K2 HE, swap F1–F12 with their media/system functions when macOS uses F-keys as standard",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f1" },
+          "to": [{ "consumer_key_code": "display_brightness_decrement" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "display_brightness_decrement" },
+          "to": [{ "key_code": "f1" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f2" },
+          "to": [{ "consumer_key_code": "display_brightness_increment" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "display_brightness_increment" },
+          "to": [{ "key_code": "f2" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f3" },
+          "to": [{ "key_code": "mission_control" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "mission_control" },
+          "to": [{ "key_code": "f3" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f4" },
+          "to": [{ "key_code": "launchpad" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "launchpad" },
+          "to": [{ "key_code": "f4" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f5" },
+          "to": [{ "key_code": "dictation" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "dictation" },
+          "to": [{ "key_code": "f5" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f6" },
+          "to": [{ "key_code": "do_not_disturb" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "do_not_disturb" },
+          "to": [{ "key_code": "f6" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f7" },
+          "to": [{ "consumer_key_code": "rewind" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "rewind" },
+          "to": [{ "key_code": "f7" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f8" },
+          "to": [{ "consumer_key_code": "play_or_pause" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "play_or_pause" },
+          "to": [{ "key_code": "f8" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f9" },
+          "to": [{ "consumer_key_code": "fast_forward" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "fast_forward" },
+          "to": [{ "key_code": "f9" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f10" },
+          "to": [{ "consumer_key_code": "mute" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "mute" },
+          "to": [{ "key_code": "f10" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f11" },
+          "to": [{ "consumer_key_code": "volume_decrement" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "volume_decrement" },
+          "to": [{ "key_code": "f11" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+
+        {
+          "type": "basic",
+          "from": { "key_code": "f12" },
+          "to": [{ "consumer_key_code": "volume_increment" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "consumer_key_code": "volume_increment" },
+          "to": [{ "key_code": "f12" }],
+          "conditions": [
+            {
+              "type": "device_unless",
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
