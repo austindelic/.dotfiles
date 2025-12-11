@@ -120,7 +120,7 @@ alias cloc='scc'
 alias td='taskwarrior-tui'
 alias y='yazi-wrapper'
 alias zj='zellij'
-
+alias ghmd='gh markdown-preview'
 # productivity
 alias c='clear'
 alias h='history'
