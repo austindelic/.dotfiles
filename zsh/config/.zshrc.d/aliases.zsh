@@ -102,7 +102,6 @@ alias grep='rg'
 alias top='btop'
 alias cat='bat'
 alias ls='eza --icons --group-directories-first'
-alias diff='delta'
 #tools
 alias pingg='gping'
 alias bench='hyperfine'
@@ -110,13 +109,14 @@ alias fk='fkill'
 alias g=git
 alias vi=vim
 alias bb='brew bundle --file=$HOME/.config/brew/.Brewfile'
+alias b="brew"
 alias lg='lazygit'
 alias cddf='cd ~/.dotfiles'
 alias python='python3'
 alias vim='nvim'
 alias nvid='neovide'
 alias ghostty='/Applications/Ghostty.app/Contents/MacOS/ghostty'
-alias cloc='scc'
+alias cloc='tokei'
 alias td='taskwarrior-tui'
 alias y='yazi-wrapper'
 alias zj='zellij'

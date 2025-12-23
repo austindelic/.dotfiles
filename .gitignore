@@ -10,4 +10,4 @@
 *.local.zsh
 *.zwc
 *.zwc.old
-
+.DS_Store

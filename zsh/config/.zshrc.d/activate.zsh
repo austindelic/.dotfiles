@@ -7,3 +7,5 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 enable-fzf-tab
 export EDITOR=nvim
+export STU_ROOT_DIR="~/.config/stu"
+export GPG_TTY=\$(tty)

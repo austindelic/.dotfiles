@@ -24,6 +24,7 @@ direnv = "~/.config/direnv"
 spicetify = "~/.config/spicetify"
 mise = "~/.config/mise"
 posting = "~/.config/posting"
+stu = "~/.config/stu"
 [default.variables]
 
 [settings]
