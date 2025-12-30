@@ -93,14 +93,14 @@ alias p='cproj'
 
 #modern unix:
 alias cd='z'
-alias ps='procs'
 alias du='dust'
 alias df='duf'
 alias dig='doggo'
 alias grep='rg'
 alias top='btop'
-alias cat='bat'
+# alias cat='bat'
 alias ls='eza --icons --group-directories-first'
+
 #tools
 alias pingg='gping'
 alias bench='hyperfine'
@@ -112,6 +112,7 @@ alias b="brew"
 alias lg='lazygit'
 alias cddf='cd ~/.dotfiles'
 alias python='python3'
+alias lua='luajit'
 alias vim='nvim'
 alias nvid='neovide'
 alias ghostty='/Applications/Ghostty.app/Contents/MacOS/ghostty'
