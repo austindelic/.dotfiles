@@ -135,6 +135,7 @@ alias ll='eza -lha --icons --group-directories-first'
 alias lt='eza --tree --level=2 --icons'
 alias ltt='eza --tree --level=4 --icons'
 alias la='eza -a --icons'
+alias ai='cursor'
 
 # misc
 

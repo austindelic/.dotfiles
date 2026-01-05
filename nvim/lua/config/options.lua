@@ -9,5 +9,4 @@ vim.o.guifont = "JetBrainsMonoNL Nerd Font Mono:h12.5"
 vim.g.neovide_cursor_animation_length = 0.04
 vim.g.neovide_cursor_trail_size = 0.25
 vim.g.neovide_window_blurred = true
-vim.env.PATH = vim.fn.expand("~/.asdf/shims") .. ":" .. vim.env.PATH
 vim.api.nvim_set_hl(0, "TreesitterContext", { link = "Normal" })
