@@ -1,3 +1,2 @@
 theme = Monokai Soda
-font-family = JetBrains Mono NL
-
+keybind = global:super+escape=toggle_quick_terminal
