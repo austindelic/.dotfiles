@@ -1,3 +1,4 @@
+dynamic_padding = true
 srgb = true
 frame = "transparent"
 no-multigrid = true
