@@ -27,6 +27,7 @@ stu = "~/.config/stu"
 opencode = "~/.config/opencode"
 gh = "~/.config/gh"
 glow = "~/.config/glow"
+zed = "~/.config/zed"
 [default.variables]
 
 [settings]
