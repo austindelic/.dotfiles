@@ -404,25 +404,64 @@
                   "key_code": "caps_lock",
                   "modifiers": { "optional": ["any"] }
                 },
-                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
-                "to": [{ "key_code": "left_command" }],
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 150 },
+                "to": [{ "key_code": "left_control" }],
                 "to_if_alone": [{ "key_code": "escape" }],
                 "type": "basic"
               }
             ]
           },
           {
-            "description": "Caps Lock: Esc when alone, Ctrl when held",
+            "description": "Tab: normal when tapped, Command when held",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 50
+                },
+                "to_if_alone": [{ "key_code": "tab" }],
+                "to_if_held_down": [{ "key_code": "left_command" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Swap left/right Command and Control",
             "enabled": false,
             "manipulators": [
               {
                 "from": {
-                  "key_code": "caps_lock",
+                  "key_code": "left_command",
                   "modifiers": { "optional": ["any"] }
                 },
-                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
                 "to": [{ "key_code": "left_control" }],
-                "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "right_command",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [{ "key_code": "right_control" }],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "left_control",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [{ "key_code": "left_command" }],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "right_control",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [{ "key_code": "right_command" }],
                 "type": "basic"
               }
             ]

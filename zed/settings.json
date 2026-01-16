@@ -7,6 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_buffer_font_size": 13.0,
+  "agent_ui_font_size": 16.0,
+  "cursor_blink": true,
+  "ui_font_family": "DepartureMono Nerd Font Mono",
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "project_panel": {
+    "dock": "left"
+  },
   "base_keymap": "VSCode",
   "helix_mode": true,
   "vim_mode": false,
@@ -24,7 +33,7 @@
   "buffer_font_size": 13.0,
   "theme": {
     "mode": "dark",
-    "light": "Monokai Night Soft",
+    "light": "Gruvbox Light Soft",
     "dark": "Zedokai Darker Classic"
   }
 }
