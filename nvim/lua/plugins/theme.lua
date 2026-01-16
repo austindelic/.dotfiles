@@ -1,6 +1,10 @@
 return {
   -- add gruvbox
-  { "UtkarshVerma/molokai.nvim", lazy = true, priority = 1000, opts = ... },
+  {
+    "UtkarshVerma/molokai.nvim",
+    lazy = false,
+    priority = 1000,
+  },
   {
     "folke/tokyonight.nvim",
     lazy = true,
@@ -18,7 +22,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "molokai",
+      colorscheme = "monokai-nightasty",
     },
   },
 }

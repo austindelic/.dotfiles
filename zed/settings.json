@@ -14,26 +14,26 @@
   "buffer_line_height": "comfortable",
   "buffer_font_weight": 400.0,
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "base_keymap": "VSCode",
-  "helix_mode": true,
-  "vim_mode": false,
+  "helix_mode": false,
+  "vim_mode": true,
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font Mono"
+    "font_family": "JetBrainsMono Nerd Font Mono",
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "icon_theme": {
     "mode": "system",
     "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+    "dark": "Zed (Default)",
   },
   "ui_font_size": 16,
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 12.5,
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light Soft",
-    "dark": "Zedokai Darker Classic"
-  }
+    "dark": "Zedokai Darker Classic",
+  },
 }
