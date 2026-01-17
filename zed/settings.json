@@ -7,12 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "show_edit_predictions": true,
   "relative_line_numbers": "enabled",
   "agent_buffer_font_size": 13.0,
   "agent_ui_font_size": 16.0,
   "cursor_blink": true,
   "ui_font_family": "DepartureMono Nerd Font Mono",
-  "buffer_line_height": "comfortable",
+  "buffer_line_height": "standard",
   "buffer_font_weight": 400.0,
   "project_panel": {
     "dock": "left",
@@ -30,11 +31,15 @@
     "light": "Zed (Default)",
     "dark": "Zed (Default)",
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 12.5,
+  "ui_font_size": 16.0,
+  "buffer_font_size": 13.0,
   "theme": {
-    "mode": "dark",
-    "light": "Gruvbox Light Soft",
+    "mode": "system",
+    "light": "Zedokai Darker Classic",
     "dark": "Zedokai Darker Classic",
+  },
+
+  "vim": {
+    "use_system_clipboard": "on_yank",
   },
 }
