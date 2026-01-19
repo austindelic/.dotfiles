@@ -7,7 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "show_edit_predictions": true,
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "show_edit_predictions": false,
   "relative_line_numbers": "enabled",
   "agent_buffer_font_size": 13.0,
   "agent_ui_font_size": 16.0,
@@ -31,14 +39,13 @@
     "light": "Zed (Default)",
     "dark": "Zed (Default)",
   },
-  "ui_font_size": 16.0,
+  "ui_font_size": 15.5,
   "buffer_font_size": 13.0,
   "theme": {
     "mode": "system",
     "light": "Zedokai Darker Classic",
     "dark": "Zedokai Darker Classic",
   },
-
   "vim": {
     "use_system_clipboard": "on_yank",
   },

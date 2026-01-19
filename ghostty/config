@@ -1,4 +1,8 @@
 theme = Monokai Classic
-keybind = global:super+escape=toggle_quick_terminal
+keybind = global:cmd+escape=toggle_quick_terminal
 font-family = JetBrains Mono NL
 macos-option-as-alt = left
+background-opacity = 0.85
+background-opacity-cells = false
+background-blur = 80
+macos-icon = xray

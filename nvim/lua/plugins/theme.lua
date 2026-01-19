@@ -23,6 +23,7 @@ return {
         "khoido2003/monokai-v2.nvim",
         priority = 1000,
         opts = {
+            transparent_background = true,
             filter = "classic"
         }
     },
