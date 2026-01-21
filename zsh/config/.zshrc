@@ -2,7 +2,6 @@
 #
 # .zshrc - Zsh file loaded on interactive shell sessions.
 #
-zmodload zsh/zprof
 # Enable Powerlevel10k instant prompt. Should stay close to the top of .zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -18,13 +17,11 @@ autoload -Uz $ZFUNCDIR/*(.:t)
 # Set any zstyles you might use for configuration.
 [[ ! -f ${ZDOTDIR:-$HOME}/.zstyles ]] || source ${ZDOTDIR:-$HOME}/.zstyles
 
-# Clone antidote if necessary.
-if [[ ! -d ${ZDOTDIR:-$HOME}/.antidote ]]; then
-  git clone https://github.com/mattmc3/antidote ${ZDOTDIR:-$HOME}/.antidote
-fi
 
 # Create an amazing Zsh config using antidote plugins.
-source ${ZDOTDIR:-$HOME}/.antidote/antidote.zsh
+#
+source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+# source $(brew --prefix antidote)/share/antidote/antidote.zsh
 antidote load
 
 # Source anything in .zshrc.d.
