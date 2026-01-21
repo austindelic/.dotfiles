@@ -4,6 +4,7 @@ export PATH="/Users/AustinDe/.cache/.bun/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin:$PATH"
 export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
+HOMEBREW_NO_ENV_HINTS=1
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
