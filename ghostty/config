@@ -6,3 +6,4 @@ background-opacity = 0.75
 background-opacity-cells = false
 background-blur = 70
 macos-icon = xray
+cursor-text = cell-background
