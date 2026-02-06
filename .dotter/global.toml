@@ -20,7 +20,6 @@ vscode = "~/Library/Application Support/Code/User"
 karabiner = "~/.config/karabiner"
 neovide = "~/.config/neovide"
 wallpapers = "~/.config/wallpapers"
-spicetify = "~/.config/spicetify"
 mise = "~/.config/mise"
 posting = "~/.config/posting"
 stu = "~/.config/stu"
@@ -28,6 +27,7 @@ opencode = "~/.config/opencode"
 gh = "~/.config/gh"
 glow = "~/.config/glow"
 zed = "~/.config/zed"
+serie = "~/.config/serie/"
 [default.variables]
 
 [settings]

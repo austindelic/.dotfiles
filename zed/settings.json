@@ -7,6 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "scrollbar": {
+    "git_diff": true
+  },
+  "edit_predictions": {
+    "mode": "eager"
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
   "language_models": {
     "openai_compatible": {
       "Cerebras": {
@@ -55,6 +78,7 @@
     },
   ],
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "Cerebras",
       "model": "gpt-oss-120b",
@@ -62,11 +86,11 @@
     "favorite_models": [],
     "model_parameters": [],
   },
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
   "relative_line_numbers": "enabled",
   "agent_buffer_font_size": 13.0,
   "agent_ui_font_size": 16.0,
-  "cursor_blink": true,
+  "cursor_blink": false,
   "ui_font_family": "DepartureMono Nerd Font Mono",
   "buffer_line_height": "standard",
   "buffer_font_weight": 400.0,
@@ -86,7 +110,7 @@
     "light": "Zed (Default)",
     "dark": "Catppuccin Latte",
   },
-  "ui_font_size": 15.5,
+  "ui_font_size": 14.5,
   "buffer_font_size": 13.0,
   "theme": {
     "mode": "dark",

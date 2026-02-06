@@ -17,7 +17,13 @@ function cproj() {
 
   cd "$HOME/Projects/$dir"
 }
+function wproj() {
+  local dir
+  dir=$(fd . ~/work -t d -d 1 -x basename {} \
+    | fzf --height=40% --reverse --border --prompt='work> ') || return
 
+  cd "$HOME/work/$dir"
+}
 function fkill() {
     ps aux | fzf --height 40% --reverse | awk '{print $2}' | xargs kill -9
 }
@@ -90,7 +96,7 @@ function sourcecddf() {
 alias tools='tools_menu'
 alias help='tools'
 alias p='cproj'
-
+alias wo='wproj'
 #modern unix:
 alias cd='z'
 alias du='dust'
@@ -110,6 +116,7 @@ alias vi=vim
 alias bb='brew bundle --file=$HOME/.config/brew/.Brewfile'
 alias b="brew"
 alias lg='lazygit'
+alias gg='lazygit'
 alias cddf='cd ~/.dotfiles'
 alias python='python3'
 alias lua='luajit'
@@ -121,6 +128,8 @@ alias td='taskwarrior-tui'
 alias y='yazi-wrapper'
 alias zj='zellij'
 alias ghmd='gh markdown-preview'
+alias calc='kalker'
+alias lssh='lazyssh'
 # productivity
 alias c='clear'
 alias h='history'
@@ -128,7 +137,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias -- -='cd -'            # go back
-alias vf='fzf --preview "bat --style=numbers --color=always {}" | xargs -r ${EDITOR:-nvim}'
 alias cdf='cd "$(fd --type d | fzf)"'
 alias mkcd='mkdir -p "$1" && cd "$1"'
 alias ll='eza -lha --icons --group-directories-first'
@@ -136,8 +144,6 @@ alias lt='eza --tree --level=2 --icons'
 alias ltt='eza --tree --level=4 --icons'
 alias la='eza -a --icons'
 alias ai='cursor'
-
+alias nproc="sysctl -n hw.physicalcpu"
+alias mr="mise run"
 # misc
-
-
-
