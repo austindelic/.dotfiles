@@ -7,11 +7,38 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "claude": {
+      "default_model": "sonnet"
+    }
+  },
+  "toolbar": {
+    "code_actions": false,
+    "agent_review": true,
+    "selections_menu": true,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "gutter": {
+    "line_numbers": true
+  },
+  "which_key": {
+    "enabled": false
+  },
+  "outline_panel": {
+    "button": true
+  },
+  "cursor_shape": "bar",
   "scrollbar": {
+    "show": "auto",
     "git_diff": true
   },
   "edit_predictions": {
-    "mode": "eager"
+    "provider": "zed",
+    "mode": "subtle"
   },
   "lsp": {
     "vtsls": {
@@ -45,8 +72,8 @@
               "images": false,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
-              "chat_completions": true,
-            },
+              "chat_completions": true
+            }
           },
           {
             "name": "qwen-3-32b",
@@ -58,12 +85,12 @@
               "images": false,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
-              "chat_completions": true,
-            },
-          },
-        ],
-      },
-    },
+              "chat_completions": true
+            }
+          }
+        ]
+      }
+    }
   },
   "ssh_connections": [
     {
@@ -72,22 +99,22 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/adelic"],
-        },
-      ],
-    },
+          "paths": ["/home/adelic"]
+        }
+      ]
+    }
   ],
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "Cerebras",
-      "model": "gpt-oss-120b",
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.6"
     },
     "favorite_models": [],
-    "model_parameters": [],
+    "model_parameters": []
   },
   "show_edit_predictions": true,
-  "relative_line_numbers": "enabled",
+  "relative_line_numbers": "disabled",
   "agent_buffer_font_size": 13.0,
   "agent_ui_font_size": 16.0,
   "cursor_blink": false,
@@ -95,30 +122,55 @@
   "buffer_line_height": "standard",
   "buffer_font_weight": 400.0,
   "project_panel": {
-    "dock": "left",
+    "sort_mode": "directories_first",
+    "hide_hidden": false,
+    "scrollbar": {
+      "show": "system"
+    },
+    "bold_folder_labels": false,
+    "indent_size": 20.0,
+    "git_status": true,
+    "entry_spacing": "standard",
+    "dock": "left"
   },
   "base_keymap": "VSCode",
   "helix_mode": false,
   "vim_mode": true,
   "terminal": {
-    "font_family": "JetBrainsMono Nerd Font Mono",
+    "dock": "bottom",
+    "font_family": "JetBrainsMono Nerd Font Mono"
   },
   "autosave": "on_focus_change",
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "icon_theme": {
     "mode": "system",
     "light": "Zed (Default)",
-    "dark": "Catppuccin Latte",
+    "dark": "Catppuccin Latte"
   },
   "ui_font_size": 14.5,
   "buffer_font_size": 13.0,
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light Soft",
-    "dark": "Zedokai Darker Classic - blurred",
+    "dark": "Zedokai Darker Classic - blurred"
   },
   "tabs": { "file_icons": true },
   "vim": {
-    "use_system_clipboard": "on_yank",
+    "use_smartcase_find": false,
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "on_yank"
   },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "inlay_hints": {
+    "enabled": true
+  }
 }

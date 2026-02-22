@@ -7,3 +7,4 @@ background-opacity-cells = false
 background-blur = 70
 macos-icon = xray
 cursor-text = cell-background
+custom-shader = shaders/cursor_warp.glsl

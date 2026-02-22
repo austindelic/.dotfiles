@@ -130,6 +130,7 @@ alias zj='zellij'
 alias ghmd='gh markdown-preview'
 alias calc='kalker'
 alias lssh='lazyssh'
+alias whisper='whisper-cli -m ~/models/whisper/ggml-large-v3-turbo-q5_0.bin'
 # productivity
 alias c='clear'
 alias h='history'
