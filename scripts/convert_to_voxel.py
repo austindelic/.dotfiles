@@ -243,14 +243,11 @@ def export_glb(output_path: str):
 
     print("About to export to:", output_path)
 
-    result = bpy.ops.export_scene.fbx(
+    result = bpy.ops.export_scene.gltf(
         filepath=output_path,
+        export_format="GLB",
+        export_apply=True,
         use_selection=False,
-        apply_unit_scale=True,
-        apply_scale_options="FBX_SCALE_ALL",
-        bake_space_transform=True,
-        mesh_smooth_type="FACE",
-        add_leaf_bones=False,
     )
 
     print("Export result:", result)
