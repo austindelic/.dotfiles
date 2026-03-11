@@ -250,6 +250,49 @@ def planar_decimate_mesh_objects(objects, angle_deg: float):
     )
 
 
+def apply_flat_shading(objects):
+    for obj in objects:
+        if obj.type != "MESH":
+            continue
+
+        for polygon in obj.data.polygons:
+            polygon.use_smooth = False
+
+
+def flatten_material_lighting(objects):
+    seen_materials = set()
+
+    for obj in objects:
+        for slot in obj.material_slots:
+            material = slot.material
+            if material is None or material in seen_materials:
+                continue
+
+            seen_materials.add(material)
+
+            if not material.use_nodes:
+                continue
+
+            principled = next(
+                (
+                    node
+                    for node in material.node_tree.nodes
+                    if node.type == "BSDF_PRINCIPLED"
+                ),
+                None,
+            )
+            if principled is None:
+                continue
+
+            principled.inputs["Roughness"].default_value = 1.0
+            principled.inputs["Metallic"].default_value = 0.0
+            specular_input = principled.inputs.get("Specular IOR Level")
+            if specular_input is None:
+                specular_input = principled.inputs.get("Specular")
+            if specular_input is not None:
+                specular_input.default_value = 0.0
+
+
 def save_generated_images(texture_dir: str):
     os.makedirs(texture_dir, exist_ok=True)
 
@@ -301,6 +344,43 @@ def export_fbx(output_path: str):
         shutil.rmtree(texture_dir, ignore_errors=True)
 
 
+def export_glb(output_path: str):
+    output_dir = os.path.dirname(output_path)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+
+    print("About to export to:", output_path)
+
+    result = bpy.ops.export_scene.gltf(
+        filepath=output_path,
+        export_format="GLB",
+        export_apply=True,
+        use_selection=False,
+    )
+
+    print("Export result:", result)
+    print("Exists after export:", os.path.exists(output_path))
+
+    if not os.path.exists(output_path):
+        raise RuntimeError(f"GLB export did not create file: {output_path}")
+
+    print("Exported:", output_path)
+
+
+def export_model(output_path: str):
+    ext = os.path.splitext(output_path)[1].lower()
+
+    if ext == ".fbx":
+        export_fbx(output_path)
+        return
+
+    if ext == ".glb":
+        export_glb(output_path)
+        return
+
+    raise ValueError(f"Unsupported output format: {ext}")
+
+
 def main():
     input_vox, output_fbx, reference_model, target_resolution, angle_deg = get_args()
 
@@ -330,8 +410,10 @@ def main():
 
     voxel_objects = get_mesh_objects()
     planar_decimate_mesh_objects(voxel_objects, angle_deg)
+    apply_flat_shading(voxel_objects)
+    flatten_material_lighting(voxel_objects)
 
-    export_fbx(output_fbx)
+    export_model(output_fbx)
 
 
 if __name__ == "__main__":
