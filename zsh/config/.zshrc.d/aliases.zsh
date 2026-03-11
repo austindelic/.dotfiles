@@ -98,7 +98,7 @@ function vox_pipeline() {
   local res="${2:-128}"
 
   if [[ -z "$input" ]]; then
-    echo "Usage: vox_pipeline <input.glb> [resolution]"
+    echo "Usage: vox_pipeline <input_model> [resolution]"
     return 1
   fi
 
@@ -112,11 +112,11 @@ function vox_pipeline() {
     return 1
   fi
 
-  local input_abs base_name out_dir output_glb tmp_vox tmp_voxx rc
+  local input_abs base_name out_dir output_fbx tmp_vox tmp_voxx rc
   input_abs="${input:A}"
   base_name="${input_abs:t:r}"
   out_dir="${input_abs:h}"
-  output_glb="${out_dir}/${base_name}x${res}.glb"
+  output_fbx="${out_dir}/${base_name}x${res}.fbx"
 
   tmp_vox="$(mktemp -t voxquant).vox" || return 1
   tmp_voxx="$(mktemp -t voxconvert).vox" || {
@@ -140,7 +140,7 @@ function vox_pipeline() {
 
   echo "3/3 blender optimise + rescale"
   blender --background --python-exit-code 1 --python ~/.dotfiles/scripts/convert_to_voxel.py -- \
-    "$tmp_voxx" "$output_glb" "$input_abs" || {
+    "$tmp_voxx" "$output_fbx" "$input_abs" "$res" || {
     rc=$?
     rm -f -- "$tmp_vox" "$tmp_voxx"
     return $rc
@@ -148,12 +148,12 @@ function vox_pipeline() {
 
   rm -f -- "$tmp_vox" "$tmp_voxx"
 
-  if [[ ! -f "$output_glb" ]]; then
-    echo "Error: Blender finished but no output file was created: $output_glb"
+  if [[ ! -f "$output_fbx" ]]; then
+    echo "Error: Blender finished but no output file was created: $output_fbx"
     return 1
   fi
 
-  echo "Done: $output_glb"
+  echo "Done: $output_fbx"
 }
 function vox_pipeline_range() {
   local input="$1"
@@ -161,7 +161,7 @@ function vox_pipeline_range() {
   local end="${3:-512}"
 
   if [[ -z "$input" ]]; then
-    echo "Usage: vox_pipeline_range <input.glb> [start_res] [end_res]"
+    echo "Usage: vox_pipeline_range <input_model> [start_res] [end_res]"
     return 1
   fi
 
@@ -246,5 +246,5 @@ alias ai='cursor'
 alias nproc="sysctl -n hw.physicalcpu"
 alias mr="mise run"
 alias voxconvert="/Applications/vengi-voxconvert.app/Contents/MacOS/vengi-voxconvert"
-alias vox2glb='blender --background --python convert.py -- out128x.vox model.glb'
+alias vox2fbx='blender --background --python convert.py -- out128x.vox model.fbx'
 # misc

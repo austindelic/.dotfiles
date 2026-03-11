@@ -1,6 +1,8 @@
 import math
 import os
+import shutil
 import sys
+import tempfile
 
 import bpy
 from mathutils import Vector
@@ -15,20 +17,21 @@ def get_args():
     argv = sys.argv
     if "--" not in argv:
         raise ValueError(
-            "Missing '--' arguments. Expected: input.vox output.glb reference_model.glb [angle_deg]"
+            "Missing '--' arguments. Expected: input.vox output.fbx reference_model target_resolution [angle_deg]"
         )
 
     args = argv[argv.index("--") + 1 :]
 
-    if len(args) < 3:
+    if len(args) < 4:
         raise ValueError(
-            "Expected at least: input.vox output.glb reference_model.glb [angle_deg]"
+            "Expected at least: input.vox output.fbx reference_model target_resolution [angle_deg]"
         )
 
     input_vox = os.path.abspath(args[0])
     output_fbx = os.path.abspath(args[1])
     reference_model = os.path.abspath(args[2])
-    angle_deg = float(args[3]) if len(args) > 3 else 5.0
+    target_resolution = int(args[3])
+    angle_deg = float(args[4]) if len(args) > 4 else 5.0
 
     if not os.path.exists(input_vox):
         raise FileNotFoundError(f"VOX input does not exist: {input_vox}")
@@ -36,7 +39,10 @@ def get_args():
     if not os.path.exists(reference_model):
         raise FileNotFoundError(f"Reference model does not exist: {reference_model}")
 
-    return input_vox, output_fbx, reference_model, angle_deg
+    if target_resolution <= 0:
+        raise ValueError("target_resolution must be > 0")
+
+    return input_vox, output_fbx, reference_model, target_resolution, angle_deg
 
 
 def get_mesh_objects():
@@ -76,14 +82,14 @@ def import_reference_model(path: str):
     return imported
 
 
-def import_vox(input_path: str):
+def import_vox(input_path: str, voxel_size: float):
     before = set(get_mesh_objects())
 
     result = bpy.ops.import_scene.vox(
         filepath=input_path,
         import_cameras=False,
         import_hierarchy=False,
-        voxel_size=0.1,
+        voxel_size=voxel_size,
         max_texture_size=2048,
         import_material_props=False,
         material_mode="MAT_AS_TEX",
@@ -164,6 +170,20 @@ def scale_objects_uniform(objects, scale_factor):
         obj.scale *= scale_factor
 
 
+def get_uniform_scale_factor(ref_size, vox_size):
+    axis_ratios = [
+        ref_axis / vox_axis
+        for ref_axis, vox_axis in zip(ref_size, vox_size)
+        if ref_axis > 0 and vox_axis > 0
+    ]
+
+    if not axis_ratios:
+        raise RuntimeError("Invalid bounding box size while matching scale.")
+
+    axis_ratios.sort()
+    return axis_ratios[len(axis_ratios) // 2]
+
+
 def match_voxel_scale_to_reference(voxel_objects, reference_objects):
     # Apply scale so bound_box is trustworthy
     for obj in reference_objects + voxel_objects:
@@ -175,13 +195,7 @@ def match_voxel_scale_to_reference(voxel_objects, reference_objects):
     ref_size = ref_bbox["size"]
     vox_size = vox_bbox["size"]
 
-    ref_max = max(ref_size)
-    vox_max = max(vox_size)
-
-    if vox_max <= 0 or ref_max <= 0:
-        raise RuntimeError("Invalid bounding box size while matching scale.")
-
-    scale_factor = ref_max / vox_max
+    scale_factor = get_uniform_scale_factor(ref_size, vox_size)
     print(f"Reference size: {ref_size}")
     print(f"Voxel size before scale: {vox_size}")
     print(f"Uniform scale factor: {scale_factor}")
@@ -236,41 +250,79 @@ def planar_decimate_mesh_objects(objects, angle_deg: float):
     )
 
 
-def export_glb(output_path: str):
+def save_generated_images(texture_dir: str):
+    os.makedirs(texture_dir, exist_ok=True)
+
+    saved_count = 0
+
+    for image in bpy.data.images:
+        if image.source != "GENERATED":
+            continue
+
+        safe_name = bpy.path.clean_name(image.name) or "voxel_texture"
+        image_path = os.path.join(texture_dir, f"{safe_name}.png")
+        image.filepath_raw = image_path
+        image.file_format = "PNG"
+        image.save()
+        image.reload()
+        saved_count += 1
+
+    print(f"Saved {saved_count} generated texture(s) to: {texture_dir}")
+
+
+def export_fbx(output_path: str):
     output_dir = os.path.dirname(output_path)
     if output_dir:
         os.makedirs(output_dir, exist_ok=True)
 
-    print("About to export to:", output_path)
+    texture_dir = tempfile.mkdtemp(prefix="voxel-fbx-textures-")
 
-    result = bpy.ops.export_scene.gltf(
-        filepath=output_path,
-        export_format="GLB",
-        export_apply=True,
-        use_selection=False,
-    )
+    try:
+        save_generated_images(texture_dir)
+        print("About to export to:", output_path)
 
-    print("Export result:", result)
-    print("Exists after export:", os.path.exists(output_path))
+        result = bpy.ops.export_scene.fbx(
+            filepath=output_path,
+            use_selection=False,
+            apply_scale_options="FBX_SCALE_UNITS",
+            bake_space_transform=False,
+            path_mode="COPY",
+            embed_textures=True,
+        )
 
-    if not os.path.exists(output_path):
-        raise RuntimeError(f"GLB export did not create file: {output_path}")
+        print("Export result:", result)
+        print("Exists after export:", os.path.exists(output_path))
 
-    print("Exported:", output_path)
+        if not os.path.exists(output_path):
+            raise RuntimeError(f"FBX export did not create file: {output_path}")
+
+        print("Exported:", output_path)
+    finally:
+        shutil.rmtree(texture_dir, ignore_errors=True)
 
 
 def main():
-    input_vox, output_glb, reference_model, angle_deg = get_args()
+    input_vox, output_fbx, reference_model, target_resolution, angle_deg = get_args()
 
     print("VOX input:", input_vox)
-    print("Output:", output_glb)
+    print("Output:", output_fbx)
     print("Reference:", reference_model)
+    print("Target resolution:", target_resolution)
     print("Angle:", angle_deg)
 
     clear_scene()
 
     reference_objects = import_reference_model(reference_model)
-    voxel_objects = import_vox(input_vox)
+    ref_bbox = get_world_bbox(reference_objects)
+    ref_max = max(ref_bbox["size"])
+    if ref_max <= 0:
+        raise RuntimeError("Reference model has an invalid bounding box.")
+
+    voxel_size = ref_max / target_resolution
+    print("Reference size:", ref_bbox["size"])
+    print("Derived voxel size:", voxel_size)
+
+    voxel_objects = import_vox(input_vox, voxel_size)
 
     match_voxel_scale_to_reference(voxel_objects, reference_objects)
 
@@ -279,7 +331,7 @@ def main():
     voxel_objects = get_mesh_objects()
     planar_decimate_mesh_objects(voxel_objects, angle_deg)
 
-    export_glb(output_glb)
+    export_fbx(output_fbx)
 
 
 if __name__ == "__main__":
