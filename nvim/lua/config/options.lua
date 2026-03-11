@@ -4,7 +4,7 @@
 vim.g.neovide_opacity = 0.8
 vim.g.transparency = 0.8
 
-vim.o.guifont = "JetBrainsMonoNL Nerd Font Mono:h12.5"
+vim.o.guifont = "JetBrainsMonoNL Nerd Font Mono:h13.0"
 -- vim.o.guifont = "JetBrainsMonoNL Nerd Font Mono:h18"
 vim.g.neovide_cursor_animation_length = 0.04
 vim.g.neovide_cursor_trail_size = 0.25

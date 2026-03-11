@@ -1,0 +1,17 @@
+.monaco-workbench {
+    font-family: "DepartureMono Nerd Font Mono" !important;
+}
+
+.monaco-tl-twistie {
+    visibility: hidden;
+}
+
+/* reduce indentation to compensate for hidden twisties */
+.monaco-tl-twistie {
+    visibility: hidden;
+    width: 0 !important;
+}
+
+.monaco-tree-row {
+    margin-left: -10px !important;
+}

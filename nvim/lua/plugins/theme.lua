@@ -1,5 +1,4 @@
 return {
-    -- add gruvbox
     -- {
     --     "UtkarshVerma/molokai.nvim",
     --     lazy = false,
@@ -24,13 +23,13 @@ return {
         priority = 1000,
         opts = {
             transparent_background = true,
-            filter = "classic"
-        }
+            filter = "classic",
+        },
     },
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "monokai-v2",
+            colorscheme = "gruvbox",
         },
     },
 }

@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "context_servers": {
+        "some-mcp-server": {
+            "enabled": true,
+            "remote": false,
+            "command": "uvx",
+            "args": [
+                "blender-mcp"
+            ],
+            "env": {}
+        }
+    },
     "tab_size": 4,
     "indent_guides": {
         "active_line_width": 1,
@@ -15,6 +26,11 @@
         "line_width": 1,
     },
     "agent_servers": {
+        "codex": {
+            "default_config_options": {
+                "mode": "auto"
+            }
+        },
         "claude": {
             "default_model": "sonnet",
         },
@@ -66,6 +82,24 @@
     },
     "language_models": {
         "openai_compatible": {
+            "Inception": {
+                "api_url": "https://api.inceptionlabs.ai/v1",
+                "available_models": [
+                    {
+                        "name": "mercury-2",
+                        "max_tokens": 1000,
+                        "max_output_tokens": 32000,
+                        "max_completion_tokens": 200000,
+                        "capabilities": {
+                            "tools": true,
+                            "images": false,
+                            "parallel_tool_calls": false,
+                            "prompt_cache_key": false,
+                            "chat_completions": true
+                        }
+                    }
+                ]
+            },
             "Cerebras": {
                 "api_url": "https://api.cerebras.ai/v1",
                 "available_models": [
@@ -112,12 +146,13 @@
         },
     ],
     "agent": {
+        "default_profile": "write",
         "tool_permissions": {
             "default": "allow",
         },
         "default_model": {
             "provider": "copilot_chat",
-            "model": "claude-sonnet-4.6",
+            "model": "gpt-5.3-codex",
         },
         "favorite_models": [],
         "model_parameters": [],
@@ -183,6 +218,12 @@
         "enabled": true,
     },
     "languages": {
+        "TSX": {
+            "inlay_hints": {
+                "show_parameter_hints": true,
+                "show_type_hints": false
+            }
+        },
         "TypeScript": {
             "inlay_hints": {
                 "show_background": false,
