@@ -13,6 +13,8 @@ belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_se
 
 # Keybindings
 belak/zsh-utils path:editor
+jeffreytse/zsh-vi-mode
+
 # History
 belak/zsh-utils path:history
 # Prompt
