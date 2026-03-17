@@ -1,10 +1,11 @@
-theme = Monokai Classic
+theme = Gruvbox Dark Hard
 keybind = global:cmd+escape=toggle_quick_terminal
-font-family = DepartureMono Nerd Font Mono
+font-family = Maple Mono
+font-feature = -calt
 macos-option-as-alt = left
 background-opacity = 0.75
 background-opacity-cells = false
 background-blur = 70
-macos-icon = xray
 cursor-text = cell-background
 custom-shader = shaders/cursor_warp.glsl
+macos-icon = xray

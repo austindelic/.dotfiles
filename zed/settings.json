@@ -12,11 +12,12 @@
             "enabled": true,
             "remote": false,
             "command": "uvx",
-            "args": [
-                "blender-mcp"
-            ],
-            "env": {}
-        }
+            "args": ["blender-mcp"],
+            "env": {},
+        },
+    },
+    "buffer_font_features": {
+        "calt": false, // Disable ligatures
     },
     "tab_size": 4,
     "indent_guides": {
@@ -26,12 +27,14 @@
         "line_width": 1,
     },
     "agent_servers": {
-        "codex": {
+        "codex-acp": {
+            "type": "registry",
             "default_config_options": {
-                "mode": "auto"
-            }
+                "mode": "auto",
+            },
         },
-        "claude": {
+        "claude-acp": {
+            "type": "registry",
             "default_model": "sonnet",
         },
     },
@@ -95,10 +98,10 @@
                             "images": false,
                             "parallel_tool_calls": false,
                             "prompt_cache_key": false,
-                            "chat_completions": true
-                        }
-                    }
-                ]
+                            "chat_completions": true,
+                        },
+                    },
+                ],
             },
             "Cerebras": {
                 "api_url": "https://api.cerebras.ai/v1",
@@ -162,7 +165,7 @@
     "agent_buffer_font_size": 13.0,
     "agent_ui_font_size": 16.0,
     "cursor_blink": false,
-    "ui_font_family": "DepartureMono Nerd Font Mono",
+    "ui_font_family": "Input Mono",
     "buffer_line_height": "standard",
     "buffer_font_weight": 400.0,
     "project_panel": {
@@ -185,19 +188,11 @@
         "font_family": "JetBrainsMono Nerd Font Mono",
     },
     "autosave": "on_focus_change",
-    "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
-    "icon_theme": {
-        "mode": "system",
-        "light": "Zed (Default)",
-        "dark": "Catppuccin Latte",
-    },
+    "buffer_font_family": "Maple Mono",
+    "icon_theme": "Catppuccin Frappé",
     "ui_font_size": 14.5,
     "buffer_font_size": 13.0,
-    "theme": {
-        "mode": "dark",
-        "light": "Gruvbox Light Soft",
-        "dark": "Zedokai Darker Classic - blurred",
-    },
+    "theme": "Gruvbox Darker",
     "tabs": { "file_icons": true },
     "vim": {
         "use_smartcase_find": false,
@@ -221,8 +216,8 @@
         "TSX": {
             "inlay_hints": {
                 "show_parameter_hints": true,
-                "show_type_hints": false
-            }
+                "show_type_hints": false,
+            },
         },
         "TypeScript": {
             "inlay_hints": {
