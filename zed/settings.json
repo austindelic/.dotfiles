@@ -192,7 +192,7 @@
     "icon_theme": "Catppuccin Frappé",
     "ui_font_size": 14.5,
     "buffer_font_size": 13.0,
-    "theme": "Gruvbox Darker",
+    "theme": "Gruvbox Dark Solid - Blurred",
     "tabs": { "file_icons": true },
     "vim": {
         "use_smartcase_find": false,
