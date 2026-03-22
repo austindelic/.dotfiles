@@ -27,7 +27,8 @@ opencode = "~/.config/opencode"
 gh = "~/.config/gh"
 glow = "~/.config/glow"
 zed = "~/.config/zed"
-serie = "~/.config/serie/"
+serie = "~/.config/serie"
+claude = "~/.claude"
 [default.variables]
 
 [settings]

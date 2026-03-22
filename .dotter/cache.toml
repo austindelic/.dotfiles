@@ -1,6 +1,7 @@
 [symlinks]
 "brew/.Brewfile" = "/Users/austindelic/.config/brew/.Brewfile"
 "btop/btop.conf" = "/Users/austindelic/.config/btop/btop.conf"
+"claude/settings.json" = "/Users/austindelic/.claude/settings.json"
 "eza/theme.yaml" = "/Users/austindelic/.config/eza/theme.yaml"
 "gh/config.yml" = "/Users/austindelic/.config/gh/config.yml"
 "gh/hosts.yml" = "/Users/austindelic/.config/gh/hosts.yml"
@@ -64,6 +65,7 @@
 "zed/keymap.json" = "/Users/austindelic/.config/zed/keymap.json"
 "zed/settings.json" = "/Users/austindelic/.config/zed/settings.json"
 "zed/tasks.json" = "/Users/austindelic/.config/zed/tasks.json"
+"zed/themes/.DS_Store" = "/Users/austindelic/.config/zed/themes/.DS_Store"
 "zed/themes/gruvbox.json" = "/Users/austindelic/.config/zed/themes/gruvbox.json"
 "zed/themes/monokai_blurred.json" = "/Users/austindelic/.config/zed/themes/monokai_blurred.json"
 "zsh/.hushlogin" = "/Users/austindelic/.hushlogin"
@@ -75,14 +77,16 @@
 "zsh/config/.zsh_plugins.txt" = "/Users/austindelic/.config/zsh/.zsh_plugins.txt"
 "zsh/config/.zsh_plugins.zsh" = "/Users/austindelic/.config/zsh/.zsh_plugins.zsh"
 "zsh/config/.zsh_sessions/148B76A2-9E60-4604-8FE1-D4FA0108CA3F.session" = "/Users/austindelic/.config/zsh/.zsh_sessions/148B76A2-9E60-4604-8FE1-D4FA0108CA3F.session"
+"zsh/config/.zsh_sessions/33B00831-9BB0-443B-B099-A3D226160329.session" = "/Users/austindelic/.config/zsh/.zsh_sessions/33B00831-9BB0-443B-B099-A3D226160329.session"
+"zsh/config/.zsh_sessions/5548D446-69A6-4733-BAA4-64A82662B370.session" = "/Users/austindelic/.config/zsh/.zsh_sessions/5548D446-69A6-4733-BAA4-64A82662B370.session"
 "zsh/config/.zsh_sessions/916FFA50-0EF9-401A-91A7-41E9F54A4B95.session" = "/Users/austindelic/.config/zsh/.zsh_sessions/916FFA50-0EF9-401A-91A7-41E9F54A4B95.session"
+"zsh/config/.zsh_sessions/A48D5CA5-186F-431C-8ACC-333DAD11993D.session" = "/Users/austindelic/.config/zsh/.zsh_sessions/A48D5CA5-186F-431C-8ACC-333DAD11993D.session"
 "zsh/config/.zsh_sessions/_expiration_check_timestamp" = "/Users/austindelic/.config/zsh/.zsh_sessions/_expiration_check_timestamp"
 "zsh/config/.zshrc" = "/Users/austindelic/.config/zsh/.zshrc"
 "zsh/config/.zshrc.d/.fzf-git.zsh" = "/Users/austindelic/.config/zsh/.zshrc.d/.fzf-git.zsh"
 "zsh/config/.zshrc.d/activate.zsh" = "/Users/austindelic/.config/zsh/.zshrc.d/activate.zsh"
 "zsh/config/.zshrc.d/aliases.zsh" = "/Users/austindelic/.config/zsh/.zshrc.d/aliases.zsh"
 "zsh/config/.zshrc.d/history-substring-search.zsh" = "/Users/austindelic/.config/zsh/.zshrc.d/history-substring-search.zsh"
-"zsh/config/.zshrc.d/zsh-vim.zsh" = "/Users/austindelic/.config/zsh/.zshrc.d/zsh-vim.zsh"
 "zsh/config/.zstyles" = "/Users/austindelic/.config/zsh/.zstyles"
 
 [templates]

@@ -7,9 +7,9 @@ export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 HOMEBREW_NO_ENV_HINTS=1
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
-source <(fzf --zsh)
 enable-fzf-tab
 export EDITOR="zed --wait"
 export STU_ROOT_DIR="~/.config/stu"
 export GPG_TTY=\$(tty)
 export TERM=xterm-256color
+source <(fzf --zsh)

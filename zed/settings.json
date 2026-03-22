@@ -28,12 +28,15 @@
     },
     "agent_servers": {
         "codex-acp": {
-            "type": "registry",
             "default_config_options": {
-                "mode": "auto",
+                "mode": "auto"
             },
+            "type": "registry",
         },
         "claude-acp": {
+            "default_config_options": {
+                "mode": "acceptEdits"
+            },
             "type": "registry",
             "default_model": "sonnet",
         },
