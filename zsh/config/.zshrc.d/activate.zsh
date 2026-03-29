@@ -12,4 +12,5 @@ export EDITOR="zed --wait"
 export STU_ROOT_DIR="~/.config/stu"
 export GPG_TTY=\$(tty)
 export TERM=xterm-256color
-source <(fzf --zsh)
+export VCPKG_ROOT=~/.vcpkg
+zvm_after_init_commands+=('source <(fzf --zsh)')
