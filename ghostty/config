@@ -1,6 +1,7 @@
 theme = Gruvbox Dark
 keybind = global:cmd+escape=toggle_quick_terminal
 font-family = Maple Mono
+font-size = 14
 font-feature = -calt
 macos-option-as-alt = left
 background-opacity-cells = false

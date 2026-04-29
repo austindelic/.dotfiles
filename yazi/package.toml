@@ -2,6 +2,6 @@
 deps = []
 
 [[flavor.deps]]
-use = "sanjinso/monokai-vibrant"
-rev = "8b68223"
-hash = "f4458ebaf8961d714eba05fe5ba40166"
+use = "bennyyip/gruvbox-dark"
+rev = "619fdc5"
+hash = "d4c7003ec6dc4efd5d3a050d5c2f2575"

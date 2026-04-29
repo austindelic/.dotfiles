@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+    "cli_default_open_behavior": "existing_window",
+    "collaboration_panel": {
+        "dock": "left"
+    },
+    "git_panel": {
+        "dock": "left"
+    },
+    "buffer_font_size": 14.0,
     "format_on_save": "on",
     "context_servers": {
         "some-mcp-server": {
@@ -36,6 +44,7 @@
         },
         "claude-acp": {
             "default_config_options": {
+                "effort": "medium",
                 "mode": "acceptEdits",
             },
             "type": "registry",
@@ -59,6 +68,7 @@
         "enabled": false,
     },
     "outline_panel": {
+        "dock": "left",
         "button": true,
     },
     "cursor_shape": "bar",
@@ -153,6 +163,8 @@
         },
     ],
     "agent": {
+        "sidebar_side": "right",
+        "dock": "right",
         "default_profile": "write",
         "tool_permissions": {
             "default": "allow",
@@ -164,14 +176,13 @@
         "favorite_models": [],
         "model_parameters": [],
     },
-    "show_edit_predictions": true,
+    "show_edit_predictions": false,
     "relative_line_numbers": "disabled",
     "agent_buffer_font_size": 13.0,
     "agent_ui_font_size": 16.0,
     "cursor_blink": false,
     "ui_font_family": "Input Mono",
     "buffer_line_height": "standard",
-    "buffer_font_weight": 400.0,
     "project_panel": {
         "sort_mode": "directories_first",
         "hide_hidden": false,
@@ -193,10 +204,17 @@
     },
     "autosave": "on_focus_change",
     "buffer_font_family": "Maple Mono",
-    "icon_theme": "Catppuccin Frappé",
+    "icon_theme": {
+        "mode": "dark",
+        "light": "Catppuccin Frappé",
+        "dark": "Catppuccin Frappé"
+    },
     "ui_font_size": 14.5,
-    "buffer_font_size": 13.0,
-    "theme": "Gruvbox Dark Solid",
+    "theme": {
+        "mode": "dark",
+        "light": "Ayu Light",
+        "dark": "Gruvbox Dark Solid"
+    },
     "tabs": { "file_icons": true },
     "vim": {
         "use_smartcase_find": false,

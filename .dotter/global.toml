@@ -22,13 +22,12 @@ neovide = "~/.config/neovide"
 wallpapers = "~/.config/wallpapers"
 mise = "~/.config/mise"
 posting = "~/.config/posting"
-stu = "~/.config/stu"
-opencode = "~/.config/opencode"
 gh = "~/.config/gh"
 glow = "~/.config/glow"
 zed = "~/.config/zed"
 serie = "~/.config/serie"
 claude = "~/.claude"
+bat = "~/.config/bat"
 [default.variables]
 
 [settings]

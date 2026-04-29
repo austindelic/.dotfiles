@@ -20,10 +20,14 @@
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
-    "clangd-lsp@claude-plugins-official": true
+    "clangd-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
   },
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true
-  }
+  },
+  "voiceEnabled": false,
+  "theme": "dark-ansi",
+  "editorMode": "vim"
 }
