@@ -1,8 +1,8 @@
 {
-  "title": "Built-in: F-keys = media, Fn+F-keys = F1–F12 (global F-keys ON)",
+  "title": "Built-in: F-keys = media, Fn+F-keys = F1–F12 (global F-keys ON) — disables Keychron K2 HE + ROG keyboard",
   "rules": [
     {
-      "description": "For all keyboards except Keychron K2 HE, swap F1–F12 with their media/system functions when macOS uses F-keys as standard",
+      "description": "For all keyboards except Keychron K2 HE and ROG keyboard, swap F1–F12 with their media/system functions when macOS uses F-keys as standard",
       "manipulators": [
         {
           "type": "basic",
@@ -11,7 +11,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -22,7 +22,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -34,7 +34,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -45,7 +45,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -57,7 +57,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -68,7 +68,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -80,7 +80,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -91,7 +91,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -103,7 +103,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -114,7 +114,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -126,7 +126,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -137,7 +137,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -149,7 +149,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -160,7 +160,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -172,7 +172,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -183,7 +183,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -195,7 +195,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -206,7 +206,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -218,7 +218,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -229,7 +229,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -241,7 +241,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -252,7 +252,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -264,7 +264,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         },
@@ -275,7 +275,7 @@
           "conditions": [
             {
               "type": "device_unless",
-              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }]
+              "identifiers": [{ "vendor_id": 13364, "product_id": 3616 }, { "vendor_id": 2821, "product_id": 6920 }]
             }
           ]
         }
