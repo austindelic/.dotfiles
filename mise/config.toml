@@ -1,3 +1,6 @@
+[env]
+_.file = "~/.config/mise/.env"
+
 [tools]
 "cargo:typst-live" = "latest"
 bun = "latest"
@@ -15,3 +18,6 @@ ollama = "latest"
 "cargo:voxquant" = "latest"
 "github:zeux/meshoptimizer" = "latest"
 "npm:vite-plus" = "latest"
+
+[settings]
+experimental = true

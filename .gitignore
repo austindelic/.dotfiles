@@ -11,3 +11,4 @@
 *.zwc
 *.zwc.old
 .DS_Store
+.env
