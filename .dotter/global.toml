@@ -26,7 +26,8 @@ glow = "~/.config/glow"
 zed = "~/.config/zed"
 serie = "~/.config/serie"
 agents = "~/.agents"
-codex = "~/.codex"
+agents = "~/.claude"
+claude = "~/.claude"
 bat = "~/.config/bat"
 [default.variables]
 
