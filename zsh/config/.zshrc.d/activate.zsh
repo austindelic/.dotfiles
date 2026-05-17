@@ -7,7 +7,6 @@ export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 export HOMEBREW_NO_ENV_HINTS=1
 eval "$(mise activate zsh)"
 eval "$(zoxide init zsh)"
-enable-fzf-tab
 export EDITOR="zed --wait"
 export STU_ROOT_DIR="~/.config/stu"
 export GPG_TTY=\$(tty)
@@ -19,4 +18,8 @@ export ANTHROPIC_BASE_URL="https://openrouter.ai/api"
 export ANTHROPIC_AUTH_TOKEN="$OPENROUTER_API_KEY"
 export ANTHROPIC_API_KEY=""
 export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
-zvm_after_init_commands+=('source <(fzf --zsh)')
+export HISTFILE="$HOME/.local/share/zsh/history"
+export HISTSIZE=1000
+export SAVEHIST=1000
+eval "$(atuin init zsh)"
+bindkey -M vicmd '^R' atuin-search-vicmd

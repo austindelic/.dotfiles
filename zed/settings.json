@@ -34,14 +34,6 @@
             },
             "type": "registry",
         },
-        "claude-acp": {
-            "default_config_options": {
-                "effort": "medium",
-                "mode": "auto",
-            },
-            "type": "registry",
-            "default_model": "sonnet",
-        },
     },
     "toolbar": {
         "code_actions": false,
@@ -123,7 +115,7 @@
         "default_model": {
             "enable_thinking": true,
             "provider": "openrouter",
-            "model": "google/gemini-3.1-pro-preview",
+            "model": "moonshotai/kimi-k2.6",
         },
         "favorite_models": [],
         "model_parameters": [],

@@ -6,14 +6,14 @@
 # Completions
 mattmc3/ez-compinit
 zsh-users/zsh-completions kind:fpath path:src
-aloxaf/fzf-tab  # Remove if you don't use fzf
 
 # Completion styles
 belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_setup
 
 # Keybindings
 belak/zsh-utils path:editor
-jeffreytse/zsh-vi-mode
+jeffreytse/zsh-vi-mode pre:'ZVM_INIT_MODE=sourcing'
+aloxaf/fzf-tab  # Remove if you don't use fzf
 
 # History
 belak/zsh-utils path:history
