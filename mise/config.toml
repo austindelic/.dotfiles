@@ -5,7 +5,7 @@ _.file = "~/.config/mise/.env"
 "cargo:typst-live" = "latest"
 bun = "latest"
 python = "3.10"
-node = "latest"
+node = "24"
 uv = "latest"
 luajit = "latest"
 clang = "latest"
@@ -17,7 +17,7 @@ java = "latest"
 ollama = "latest"
 "cargo:voxquant" = "latest"
 "github:zeux/meshoptimizer" = "latest"
-"npm:vite-plus" = "latest"
-
+"npm:playwright-cli" = "latest"
+pkl = "latest"
 [settings]
 experimental = true

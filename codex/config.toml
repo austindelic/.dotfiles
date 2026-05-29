@@ -1,0 +1,125 @@
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+plan_mode_reasoning_effort = "xhigh"
+service_tier = "default"
+notify = [
+  "/Users/austindelic/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+  "turn-ended",
+]
+
+[projects."/Users/austindelic/work/scrypt/Mobile"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/code-animation"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/pdi/assignment"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/.dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/.agents/skills/avoid-ai-writing"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/devstead"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/unix_c/assignment"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/unix_c/assignment/docs/out"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/dsa/w9"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/dsa/w10"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/isad/assignment"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/isad/assignment/out"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/rust-prime"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/asdx"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/ax"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/work/ellie/emperor-double-glazing"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-05-25/what-mdoel-are-you"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/dsa/assignment"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/trading-bot"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/dsa/minecraft-ai-builder"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Desktop/submission"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/dsa/assignment/out"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/work/scrypt"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/work/scrypt/Backend"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/austindelic"]
+trust_level = "trusted"
+
+[tui]
+theme = "gruvbox-dark"
+vim_mode_default = true
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
+[marketplaces.openai-bundled]
+last_updated = "2026-05-25T07:25:22Z"
+source_type = "local"
+source = "/Users/austindelic/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-05-25T08:11:06Z"
+source_type = "local"
+source = "/Users/austindelic/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[desktop]
+ambient-suggestions-enabled = false
+conversationDetailMode = "STEPS_COMMANDS"
+keepRemoteControlAwakeWhilePluggedIn = false
+default-service-tier = "priority"
+
+[features]
+js_repl = false
+
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
