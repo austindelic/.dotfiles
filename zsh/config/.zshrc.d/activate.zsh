@@ -22,4 +22,15 @@ export HISTFILE="$HOME/.local/share/zsh/history"
 export HISTSIZE=1000
 export SAVEHIST=1000
 eval "$(atuin init zsh)"
+
+# Atuin updates LBUFFER after its redraw; redraw again so syntax highlighting runs.
+if (( $+functions[_atuin_search] && ! $+functions[_atuin_search_without_final_redraw] )); then
+  functions[_atuin_search_without_final_redraw]=$functions[_atuin_search]
+  _atuin_search() {
+    _atuin_search_without_final_redraw "$@"
+    local ret=$?
+    zle reset-prompt
+    return $ret
+  }
+fi
 bindkey -M vicmd '^R' atuin-search-vicmd

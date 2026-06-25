@@ -1,11 +1,12 @@
 model = "gpt-5.5"
-model_reasoning_effort = "medium"
+model_reasoning_effort = "xhigh"
 plan_mode_reasoning_effort = "xhigh"
-service_tier = "default"
+service_tier = "priority"
 notify = [
   "/Users/austindelic/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
   "turn-ended",
 ]
+personality = "pragmatic"
 
 [projects."/Users/austindelic/work/scrypt/Mobile"]
 trust_level = "trusted"
@@ -88,6 +89,81 @@ trust_level = "trusted"
 [projects."/Users/austindelic/projects/austindelic"]
 trust_level = "trusted"
 
+[projects."/Users/austindelic/projects/CubicChunks3"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/still"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/pdi/study"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/opentrader"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-04/computer-plugin-computer-use-openai-bundled"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-04/github-plugin-github-openai-curated-what"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-04/chrome-plugin-chrome-openai-bundled-open"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-05/files-mentioned-by-the-user-easy"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-05/files-mentioned-by-the-user-easy-2"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/ashton/help"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-08/computer-plugin-computer-use-openai-bundled"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-08/computer-plugin-computer-use-openai-bundled-2"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/uni/unix_c/study"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Desktop/COMP1002_assignment_22930121(1)"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/mechc"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/pixel-art"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/autodrift"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/s6/p4tqdsxn1sdb3v63vn217_xr0000gn/T/TestSiteBuilderRealCodexOptIn3909290916/001/workspaces/run-real-codex-site-builder-test"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/rust-league"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/ellie-ai"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-17/init"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/work/scrypt/voicemails"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-18/using-this-listing-https-www-realestate"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/work/scrypt/workflows"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/glyph"]
+trust_level = "trusted"
+
 [tui]
 theme = "gruvbox-dark"
 vim_mode_default = true
@@ -96,12 +172,12 @@ vim_mode_default = true
 "gpt-5.5" = 4
 
 [marketplaces.openai-bundled]
-last_updated = "2026-05-25T07:25:22Z"
+last_updated = "2026-06-24T15:59:37Z"
 source_type = "local"
 source = "/Users/austindelic/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-05-25T08:11:06Z"
+last_updated = "2026-06-24T05:11:25Z"
 source_type = "local"
 source = "/Users/austindelic/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
@@ -109,7 +185,57 @@ source = "/Users/austindelic/.cache/codex-runtimes/codex-primary-runtime/plugins
 ambient-suggestions-enabled = false
 conversationDetailMode = "STEPS_COMMANDS"
 keepRemoteControlAwakeWhilePluggedIn = false
-default-service-tier = "priority"
+appearanceTheme = "system"
+appearanceLightCodeThemeId = "gruvbox"
+appearanceDarkCodeThemeId = "gruvbox"
+show-context-window-usage = true
+notifications-turn-mode = "always"
+selected-avatar-id = "codex"
+codeFontSize = 14
+git-pull-request-merge-method = "merge"
+git-show-sidebar-pr-icons = true
+sansFontSize = 14
+git-branch-prefix = ""
+followUpQueueMode = "queue"
+dock-icon-preference = "codex-dark"
+
+[desktop.appearanceLightChromeTheme]
+accent = "#458588"
+contrast = 45
+ink = "#3c3836"
+opaqueWindows = false
+surface = "#fbf1c7"
+
+[desktop.appearanceLightChromeTheme.fonts]
+code = '"Maple Mono NF"'
+ui = '"Maple Mono NF"'
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#3c3836"
+diffRemoved = "#cc241d"
+skill = "#b16286"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#458588"
+contrast = 60
+ink = "#ebdbb2"
+opaqueWindows = false
+surface = "#282828"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Maple Mono NF"'
+ui = '"Maple Mono NF"'
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#ebdbb2"
+diffRemoved = "#cc241d"
+skill = "#b16286"
+
+[desktop.open-in-target-preferences]
+global = "zed"
+
+[desktop.open-in-target-preferences.perPath]
+"/Users/austindelic/work/scrypt/voicemails" = "zed"
 
 [features]
 js_repl = false
@@ -123,3 +249,37 @@ enabled = true
 
 [plugins."presentations@openai-primary-runtime"]
 enabled = true
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/austindelic/.codex"
+CODEX_HOME = "/Users/austindelic/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "5504c0782b5c86b7dd08314045b9843e973a230e1be8f7e2e0ba3716fc63c55e"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.616.81150"
+CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"

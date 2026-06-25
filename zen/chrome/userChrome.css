@@ -1,0 +1,276 @@
+/* =========================================================
+   Austin Zen Theme — Gruvbox Workstation
+   Dense, calm, Maple Mono, soft corners
+   ========================================================= */
+
+/* Optional: keep your existing Zen theme imports */
+@import url("./zen-themes.css");
+
+/* ---------- Global variables ---------- */
+
+:root {
+    --az-bg: #1d2021;
+    --az-bg-soft: #282828;
+    --az-bg-softer: #32302f;
+    --az-fg: #ebdbb2;
+    --az-muted: #a89984;
+
+    --az-red: #cc241d;
+    --az-orange: #d65d0e;
+    --az-yellow: #d79921;
+    --az-green: #98971a;
+    --az-blue: #458588;
+    --az-purple: #b16286;
+    --az-aqua: #689d6a;
+
+    --az-border: #504945;
+    --az-border-soft: #3c3836;
+
+    --az-radius: 9px;
+    --az-font: "Maple Mono NF", "Maple Mono", "JetBrains Mono", monospace;
+
+    --zen-border-radius: var(--az-radius) !important;
+}
+
+/* ---------- Global UI font ---------- */
+
+* {
+    font-family: var(--az-font) !important;
+    font-size: 13px !important;
+}
+
+/* ---------- Main browser chrome ---------- */
+
+#navigator-toolbox,
+#zen-main-app-wrapper,
+#browser,
+#appcontent,
+#tabbrowser-tabbox {
+    background: var(--az-bg) !important;
+    color: var(--az-fg) !important;
+}
+
+/* ---------- Sidebar / vertical tabs ---------- */
+
+#zen-sidebar,
+#titlebar,
+#TabsToolbar,
+#tabbrowser-tabs {
+    background: var(--az-bg) !important;
+    border-color: var(--az-border-soft) !important;
+}
+
+.tabbrowser-tab {
+    min-height: 34px !important;
+    margin-block: 3px !important;
+    color: var(--az-muted) !important;
+}
+
+.tabbrowser-tab .tab-background {
+    border-radius: var(--az-radius) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+}
+
+/* Hovered tab */
+.tabbrowser-tab:hover .tab-background {
+    background: var(--az-bg-soft) !important;
+    border-color: var(--az-border-soft) !important;
+}
+
+/* Active tab */
+.tabbrowser-tab[selected="true"] .tab-background {
+    background:
+        repeating-linear-gradient(
+            135deg,
+            rgba(215, 153, 33, 0.13) 0px,
+            rgba(215, 153, 33, 0.13) 5px,
+            transparent 5px,
+            transparent 10px
+        ),
+        var(--az-bg-soft) !important;
+
+    border: 1px solid var(--az-yellow) !important;
+    box-shadow: inset 3px 0 0 var(--az-yellow) !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+    color: var(--az-fg) !important;
+    font-weight: 600 !important;
+}
+
+/* Unloaded / pending tabs */
+.tabbrowser-tab[pending="true"],
+.tabbrowser-tab[discarded="true"] {
+    opacity: 0.55 !important;
+}
+
+/* Tab close button */
+.tab-close-button {
+    border-radius: 999px !important;
+    color: var(--az-muted) !important;
+}
+
+.tab-close-button:hover {
+    background: var(--az-red) !important;
+    color: var(--az-fg) !important;
+}
+
+/* ---------- URL bar ---------- */
+
+#urlbar,
+#urlbar-background,
+#searchbar {
+    border-radius: var(--az-radius) !important;
+    background: var(--az-bg-soft) !important;
+    color: var(--az-fg) !important;
+    border: 1px solid var(--az-border) !important;
+}
+
+#urlbar[focused="true"] #urlbar-background {
+    border-color: var(--az-yellow) !important;
+    box-shadow: 0 0 0 2px rgba(215, 153, 33, 0.18) !important;
+}
+
+#urlbar-input {
+    color: var(--az-fg) !important;
+    font-size: 13px !important;
+}
+
+#identity-box,
+#tracking-protection-icon-container {
+    color: var(--az-aqua) !important;
+}
+
+/* URL suggestions dropdown */
+.urlbarView {
+    background: var(--az-bg-soft) !important;
+    border: 1px solid var(--az-border) !important;
+    border-radius: var(--az-radius) !important;
+    color: var(--az-fg) !important;
+}
+
+.urlbarView-row {
+    border-radius: 7px !important;
+}
+
+.urlbarView-row:hover,
+.urlbarView-row[selected] {
+    background: var(--az-bg-softer) !important;
+}
+
+/* ---------- Toolbar buttons ---------- */
+
+toolbarbutton,
+.toolbarbutton-1 {
+    border-radius: var(--az-radius) !important;
+    color: var(--az-muted) !important;
+}
+
+toolbarbutton:hover,
+.toolbarbutton-1:hover {
+    background: var(--az-bg-soft) !important;
+    color: var(--az-fg) !important;
+}
+
+toolbarbutton[open="true"],
+.toolbarbutton-1[open="true"] {
+    background: var(--az-bg-softer) !important;
+    color: var(--az-yellow) !important;
+}
+
+/* ---------- Menus / popups ---------- */
+
+menupopup,
+panel,
+.panel-arrowcontent {
+    background: var(--az-bg-soft) !important;
+    color: var(--az-fg) !important;
+    border: 1px solid var(--az-border) !important;
+    border-radius: var(--az-radius) !important;
+}
+
+menu,
+menuitem {
+    color: var(--az-fg) !important;
+    border-radius: 6px !important;
+}
+
+menu:hover,
+menuitem:hover {
+    background: var(--az-bg-softer) !important;
+    color: var(--az-yellow) !important;
+}
+
+/* ---------- Bookmarks bar ---------- */
+
+#PersonalToolbar {
+    background: var(--az-bg) !important;
+    border-top: 1px solid var(--az-border-soft) !important;
+    color: var(--az-muted) !important;
+}
+
+.bookmark-item {
+    border-radius: 6px !important;
+    color: var(--az-muted) !important;
+}
+
+.bookmark-item:hover {
+    background: var(--az-bg-soft) !important;
+    color: var(--az-fg) !important;
+}
+
+/* ---------- Splitters / borders ---------- */
+
+splitter,
+.browser-sidebar2,
+#sidebar-box {
+    border-color: var(--az-border-soft) !important;
+    background: var(--az-bg) !important;
+}
+
+/* ---------- Find bar ---------- */
+
+findbar {
+    background: var(--az-bg-soft) !important;
+    color: var(--az-fg) !important;
+    border-top: 1px solid var(--az-border) !important;
+}
+
+findbar textbox {
+    background: var(--az-bg) !important;
+    color: var(--az-fg) !important;
+    border: 1px solid var(--az-border) !important;
+    border-radius: 6px !important;
+}
+
+/* ---------- Compactness tweaks ---------- */
+
+:root {
+    --tab-min-height: 34px !important;
+    --toolbarbutton-inner-padding: 6px !important;
+}
+
+#urlbar-container {
+    padding-block: 3px !important;
+}
+
+#navigator-toolbox {
+    border-bottom: 1px solid var(--az-border-soft) !important;
+}
+
+/* ---------- Scrollbars ---------- */
+
+scrollbar {
+    width: 10px !important;
+    background: var(--az-bg) !important;
+}
+
+scrollbar thumb {
+    background: var(--az-border) !important;
+    border-radius: 999px !important;
+}
+
+scrollbar thumb:hover {
+    background: var(--az-muted) !important;
+}

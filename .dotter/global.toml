@@ -4,6 +4,7 @@
 depends = []
 
 [default.files]
+# vscode = "~/Library/Application Support/Code/User"
 nvim = "~/.config/nvim/"
 btop = "~/.config/btop/"
 eza = "~/.config/eza/"
@@ -16,7 +17,6 @@ yazi = "~/.config/yazi/"
 p10k = "~/.config/p10k"
 tmux = "~/.config/tmux"
 ghostty = "~/.config/ghostty"
-# vscode = "~/Library/Application Support/Code/User"
 karabiner = "~/.config/karabiner"
 neovide = "~/.config/neovide"
 wallpapers = "~/.config/wallpapers"
@@ -30,6 +30,8 @@ agents = "~/.claude"
 agents = "~/.codex"
 codex = "~/.codex"
 bat = "~/.config/bat"
+gitlogue = "~/.config/gitlogue"
+zen = "/Users/austindelic/Library/Application Support/zen/Profiles/3m7t1b65.Default (release)"
 [default.variables]
 
 [settings]

@@ -3,6 +3,7 @@
 # CLI tools
 brew "dotter"
 brew "git"
+brew "git-lfs"
 brew "gcc"
 brew "gh"
 brew "lazygit"

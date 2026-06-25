@@ -17,6 +17,8 @@ autoload -Uz $ZFUNCDIR/*(.:t)
 # Set any zstyles you might use for configuration.
 [[ ! -f ${ZDOTDIR:-$HOME}/.zstyles ]] || source ${ZDOTDIR:-$HOME}/.zstyles
 
+# edit to what system you are using
+fpath=(/opt/homebrew/share/zsh/site-functions $ZFUNCDIR $fpath)
 
 # Create an amazing Zsh config using antidote plugins.
 #
