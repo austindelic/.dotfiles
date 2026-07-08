@@ -164,6 +164,54 @@ trust_level = "trusted"
 [projects."/Users/austindelic/projects/glyph"]
 trust_level = "trusted"
 
+[projects."/Users/austindelic/work/scrypt/ScryptPay.Checkout"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-06-30/do"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Downloads"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-03/why"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-03/in"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/work/bhutanese-community-app-australia/web"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/ashton"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-05/make-a-summary-of-each-person"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-06/add"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/rust-wgpu"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-06/pla"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-06/plan-a-massive-code-cleanup-of"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-07/get"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-07/get-the-manim-app-running-with"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/projects/yt-video-template"]
+trust_level = "trusted"
+
+[projects."/Users/austindelic/Documents/Codex/2026-07-08/don"]
+trust_level = "trusted"
+
 [tui]
 theme = "gruvbox-dark"
 vim_mode_default = true
@@ -172,12 +220,12 @@ vim_mode_default = true
 "gpt-5.5" = 4
 
 [marketplaces.openai-bundled]
-last_updated = "2026-06-24T15:59:37Z"
+last_updated = "2026-07-06T18:01:14Z"
 source_type = "local"
 source = "/Users/austindelic/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-06-24T05:11:25Z"
+last_updated = "2026-07-02T06:11:41Z"
 source_type = "local"
 source = "/Users/austindelic/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
@@ -236,6 +284,7 @@ global = "zed"
 
 [desktop.open-in-target-preferences.perPath]
 "/Users/austindelic/work/scrypt/voicemails" = "zed"
+"/Users/austindelic/work/scrypt/ScryptPay.Checkout" = "zed"
 
 [features]
 js_repl = false
@@ -276,10 +325,10 @@ NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_nod
 NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/austindelic/.codex"
 CODEX_HOME = "/Users/austindelic/.codex"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "5504c0782b5c86b7dd08314045b9843e973a230e1be8f7e2e0ba3716fc63c55e"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "60e4902788f207f88fd09344dfeafe07769488bdb2924bbb12b322c3b9d2b999"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.616.81150"
+BROWSER_USE_CODEX_APP_VERSION = "26.623.101652"
 CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"
